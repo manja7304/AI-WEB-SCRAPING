@@ -18,8 +18,6 @@ if st.button("Scrape Website"):
 
         # Scrape the website
         dom_content = scrape_website(url)
-        with open("scrapedContent.txt", "w") as file:
-            file.write(dom_content)
         body_content = extract_body_content(dom_content)
         cleaned_content = clean_body_content(body_content)
 
